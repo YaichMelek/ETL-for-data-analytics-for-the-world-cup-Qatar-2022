@@ -5,7 +5,7 @@ by [@yaichmelek](https://linkedin.com/in/yaich-melek)
 
 
 ## Demo
-![anime insights gif](https://user-images.githubusercontent.com/107370774/180192056-d3f9cac7-4818-467a-ae34-7dbf4c4a2952.gif)
+![DEMO](https://user-images.githubusercontent.com/107370774/209956654-25d7cc0f-73a6-4c24-b803-6a39bc9e3dc8.gif)
 
 ## Link
 https://app.powerbi.com/reportEmbed?reportId=111742831cb04d37878466925cd10f08&autoAuth=true&ctid=a2d8336ea2994d528636b7ef8c117a1d
