@@ -12,6 +12,7 @@ https://app.powerbi.com/reportEmbed?reportId=a2762da7-0c7c-4349-b3c1-746506c5a0f
 
 ## Screenshots
 ![Capture d’écran (493)](https://user-images.githubusercontent.com/107370774/209954106-b2783ed3-6c81-4200-97aa-1717090cc881.png)
+![Capture d’écran (494)](https://user-images.githubusercontent.com/107370774/209954340-093bf175-cab9-4b3f-b67b-dd042ef2ecf4.png)
 
 ## Steps
 1- Dataset
