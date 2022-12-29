@@ -8,7 +8,7 @@ by [@yaichmelek](https://linkedin.com/in/yaich-melek)
 ![anime insights gif](https://user-images.githubusercontent.com/107370774/180192056-d3f9cac7-4818-467a-ae34-7dbf4c4a2952.gif)
 
 ## Link
-https://app.powerbi.com/reportEmbed?reportId=11174283 1cb0 4d37 878466925cd10f08&autoAuth=true&ctid=a2d8336e a299 4d52 8636 b7ef8c117a1d
+https://app.powerbi.com/reportEmbed?reportId=111742831cb04d37878466925cd10f08&autoAuth=true&ctid=a2d8336ea2994d528636b7ef8c117a1d
 
 ## Screenshots
 ![Capture d’écran (493)](https://user-images.githubusercontent.com/107370774/209954106-b2783ed3-6c81-4200-97aa-1717090cc881.png)
