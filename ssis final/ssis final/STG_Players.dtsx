@@ -1,0 +1,2543 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="DESKTOP-VQPC36Q\USER"
+  DTS:CreatorComputerName="DESKTOP-VQPC36Q"
+  DTS:CreationDate="12/22/2022 8:46:36 PM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{DDA8307F-EC62-4EA7-BE15-659E4FDA19F9}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="STG_Players"
+  DTS:DTSID="{C249800D-74C2-4FB4-B7AD-D89F7183F7F2}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-VQPC36Q.STG_WordCup]"
+      DTS:ObjectName="DESKTOP-VQPC36Q.STG_WordCup"
+      DTS:DTSID="{C3F4C295-24FB-42F7-811D-C77106C094DC}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-VQPC36Q;Initial Catalog=STG_WordCup;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Match Data save]"
+      DTS:ObjectName="Match Data save"
+      DTS:DTSID="{43231CA2-428A-4F8B-892E-747DCE6D0CA3}"
+      DTS:CreationName="FILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Users\USER\Desktop\Word Cup Data\Match Data save" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Player Connection Manager]"
+      DTS:ObjectName="Player Connection Manager"
+      DTS:DTSID="{5292FC93-F02B-4094-9743-632777B144BB}"
+      DTS:CreationName="FLATFILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\USER\Desktop\Word Cup Data\Players Data\Player Stats.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Player"
+              DTS:DTSID="{ACF48427-36A0-4407-BC20-088EAC35229B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Position"
+              DTS:DTSID="{A5744D07-74B7-4EA4-B746-DDCD2C9286B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Team"
+              DTS:DTSID="{095913B8-ED0B-4553-AD9E-4D25F7970FDA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{E3538325-FF39-4C1F-8F13-FDFAB5FD882B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year of Birth"
+              DTS:DTSID="{E060DEAE-28E2-466F-B99F-23F0053E6C69}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Matches Played"
+              DTS:DTSID="{81EDBAAE-B324-48C7-8783-E915DB9DF68A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Starts"
+              DTS:DTSID="{056139AD-7D25-4483-9489-22ACDD879CB9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Minutes Played"
+              DTS:DTSID="{46E0D74A-26FB-467E-BE8A-687A52D37352}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="90 Minutes Played"
+              DTS:DTSID="{102EA1DB-8D20-46C0-8749-F632623C7076}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals"
+              DTS:DTSID="{5E75E2EC-1F80-4AF7-B531-3CB7093DDAF3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Assists"
+              DTS:DTSID="{1796ED3E-B57C-467C-89BB-278910A0FE42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Non-Penalty Goals"
+              DTS:DTSID="{A64BBED1-1F9D-49E2-A892-536EA07827CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Penalties Converted"
+              DTS:DTSID="{DD39B365-1795-4C95-BF88-F1006B00004B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Penalties Taken"
+              DTS:DTSID="{43A27696-6E83-49C9-88C2-8C549254C42C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Yellow Cards"
+              DTS:DTSID="{8F8C931A-64F8-4132-865C-86D167881983}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Red Cards"
+              DTS:DTSID="{B8A3780C-46B6-4232-9A07-8E3879311452}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals per 90 Minutes"
+              DTS:DTSID="{ED440274-EDFF-4937-A3D5-003707CBCA65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Assists per 90 Minutes"
+              DTS:DTSID="{03D08A34-E6A5-4AEE-947D-20B45F3E9970}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals and Assists per 90 Minutes"
+              DTS:DTSID="{D1590074-603A-4BAE-BD3E-29C1A45251FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals excluding Penalties per 90 Minutes"
+              DTS:DTSID="{70695282-1667-444E-96BC-7B480EF07818}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals and Assists excluding Penalties per 90 Minutes"
+              DTS:DTSID="{9409757D-19EB-4E5C-8D32-407EDE4B71E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Expected xG"
+              DTS:DTSID="{A19ED50E-CA7B-4A62-B9C9-A03961C77DDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Expected Non-Penalty xG"
+              DTS:DTSID="{5DAF91DB-3ABE-44FE-ABA6-95DD57116C00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Expected xAG"
+              DTS:DTSID="{EA008C74-A43B-4418-AD20-B5FFF7A62180}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Expected Non-Penalty xG and xAG"
+              DTS:DTSID="{83DDBFDF-D2E3-427A-94C2-03CEABE23320}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="xG"
+              DTS:DTSID="{2164721E-5BA2-4328-A127-27C8427C88A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="xAG"
+              DTS:DTSID="{2F46C73D-68D5-407E-B3BF-EDE2873A2D86}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="xG and xAG"
+              DTS:DTSID="{ADEA381A-B511-40EC-9DBC-7314B1D31568}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Non-Penalty xG"
+              DTS:DTSID="{DB8BF1DF-6470-4603-9909-D0BA43668D2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Non-Penalty xG and xAG"
+              DTS:DTSID="{DE4E1D27-117D-4616-9BC3-B8825C44980E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Players Connection Manager]"
+      DTS:ObjectName="Players Connection Manager"
+      DTS:DTSID="{9DA29551-1C6E-4BB6-9D8C-2BDB68952A99}"
+      DTS:CreationName="FLATFILE">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::Path]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1036"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Player"
+              DTS:DTSID="{6A0F5D86-2971-4BEE-898B-ED31C704CBAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Position"
+              DTS:DTSID="{0867C30D-79AF-481D-8CC3-E203D8A88887}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Team"
+              DTS:DTSID="{58A53958-187D-4ACF-A679-2802A4E75313}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Age"
+              DTS:DTSID="{618FA1E0-DC65-4D03-BF7D-FD397833685A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year of Birth"
+              DTS:DTSID="{919ECDCD-33FA-4201-9484-9474B56DC170}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Matches Played"
+              DTS:DTSID="{09ABF307-1F62-4AEB-88EE-86028F551757}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Starts"
+              DTS:DTSID="{AB63789E-E5FC-4550-94BE-8D8DFFB81ABB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Minutes Played"
+              DTS:DTSID="{19A346A1-7F1F-4F41-950A-2FD1EF6B3557}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="90 Minutes Played"
+              DTS:DTSID="{2E21441E-88AC-45DB-980F-6DE2381410B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals"
+              DTS:DTSID="{47881D70-6211-457E-A5DE-6E77209E4BC6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Assists"
+              DTS:DTSID="{1C93C61F-EE68-45B6-BB5F-F5AC8FC8DFDF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Non-Penalty Goals"
+              DTS:DTSID="{8D958ED0-B690-4D21-9EDE-FE95EEBCF92F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Penalties Converted"
+              DTS:DTSID="{A00BCE10-7EFF-401B-B485-F0F2CD4074B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Penalties Taken"
+              DTS:DTSID="{27DADED1-C850-424A-93E2-243F942B1C90}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Yellow Cards"
+              DTS:DTSID="{5BA81E2D-0E0B-4605-929C-5A1D66AE9860}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Red Cards"
+              DTS:DTSID="{22BE99D7-CCC1-488C-B9CC-D11319A661CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals per 90 Minutes"
+              DTS:DTSID="{AC0B4137-5252-4672-9055-9FEF0C9F3EB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Assists per 90 Minutes"
+              DTS:DTSID="{A11C106B-E7F1-4894-8F70-CFF2C648F3D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals and Assists per 90 Minutes"
+              DTS:DTSID="{F074B76A-F3E5-4125-90BB-9871E7985B2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals excluding Penalties per 90 Minutes"
+              DTS:DTSID="{6050DE8E-C7B4-4A17-9E9C-91D0C407C981}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Goals and Assists excluding Penalties per 90 Minutes"
+              DTS:DTSID="{D49BE450-309A-42C9-BED6-0DE56136DDB9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Expected xG"
+              DTS:DTSID="{1DB2D5EE-BA72-4C77-A22D-8E23C266394C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Expected Non-Penalty xG"
+              DTS:DTSID="{04CBFC71-67DE-4CE5-A9ED-1C48ABB98E9E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Expected xAG"
+              DTS:DTSID="{884B43DB-8833-4251-8869-710C299ABAA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Expected Non-Penalty xG and xAG"
+              DTS:DTSID="{5B97C2ED-51A6-47C4-B442-C753EA90D641}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="xG"
+              DTS:DTSID="{875EE79F-D2A8-4FA9-B2B8-8873568049E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="xAG"
+              DTS:DTSID="{50579E6B-00AE-4EA1-ADF2-24B177CD6A57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="xG and xAG"
+              DTS:DTSID="{C7B07569-2BCE-415F-8BDB-812E13BF6C64}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Non-Penalty xG"
+              DTS:DTSID="{0B38D7F1-E4FC-4DA1-86C4-31F671397F0C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Non-Penalty xG and xAG"
+              DTS:DTSID="{B011B214-CB75-4354-A9D2-B15CCCCE75E5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Players Data save]"
+      DTS:ObjectName="Players Data save"
+      DTS:DTSID="{5B1ED18B-69C0-4F7B-83C6-A972DB6C2FFE}"
+      DTS:CreationName="FILE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Users\USER\Desktop\Word Cup Data\Players Data save" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:Namespace="User"
+      DTS:IncludeInDebugDump="6789"
+      DTS:ObjectName="NbrLines"
+      DTS:DTSID="{B43A74A3-9B4D-4FB3-9CC1-61896F96E268}"
+      DTS:CreationName="">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:Namespace="User"
+      DTS:IncludeInDebugDump="2345"
+      DTS:ObjectName="Path"
+      DTS:DTSID="{9FDE994F-C029-45E1-BBD8-D8716E3502D9}"
+      DTS:CreationName="">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:Namespace="User"
+      DTS:IncludeInDebugDump="6789"
+      DTS:ObjectName="ResultSet"
+      DTS:DTSID="{B191BC0F-12A7-4E58-8AA5-C075E21C3D81}"
+      DTS:CreationName="">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container"
+      DTS:DTSID="{97203FF5-F59F-46DC-BD9C-D52C6AEC1906}"
+      DTS:Description="Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP">
+      <DTS:ForEachEnumerator
+        DTS:ObjectName="{9D006DAC-5100-46F2-8414-288833BFAD22}"
+        DTS:DTSID="{9D006DAC-5100-46F2-8414-288833BFAD22}"
+        DTS:CreationName="DTS.ForEachFileEnumerator.3">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\USER\Desktop\Word Cup Data\Players Data" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Check Exist File"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:ThreadHint="0"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Check Exist File"
+          DTS:DTSID="{A318F061-9233-43E9-A9F7-9083B8F569C8}"
+          DTS:Description="Execute SQL Task"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C3F4C295-24FB-42F7-811D-C77106C094DC}"
+              SQLTask:SqlStatementSource="  select count (*)&#xA;  FROM [STG_WordCup].[dbo].[history]&#xA;where fileName= ?"
+              SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ResultBinding
+                SQLTask:ResultName="0"
+                SQLTask:DtsVariableName="User::ResultSet" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Path"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="100" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Insert data"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert data"
+          DTS:DTSID="{98A81900-397C-4A3C-98CC-2DD11C1D779D}"
+          DTS:Description="Data Flow Task"
+          DTS:CreationName="SSIS.Pipeline.3">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Insert data\Flat File Source"
+                  name="Flat File Source"
+                  componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+                  description="Flat File Source"
+                  localeId="1036"
+                  usesDispositions="true"
+                  version="1"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
+                  <properties>
+                    <property
+                      name="RetainNulls"
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null.">false</property>
+                    <property
+                      name="FileNameColumnName"
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Insert data\Flat File Source.Connections[FlatFileConnection]"
+                      name="FlatFileConnection"
+                      connectionManagerID="Package.ConnectionManagers[Player Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Player Connection Manager]" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Player]"
+                          name="Player"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Player]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Player]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Position]"
+                          name="Position"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Position]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Position]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Team]"
+                          name="Team"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Team]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Team]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Age]"
+                          name="Age"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Age]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Year of Birth]"
+                          name="Year of Birth"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Year of Birth]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year of Birth]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Matches Played]"
+                          name="Matches Played"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Matches Played]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Matches Played]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Starts]"
+                          name="Starts"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Starts]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Starts]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Minutes Played]"
+                          name="Minutes Played"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Minutes Played]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Minutes Played]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[90 Minutes Played]"
+                          name="90 Minutes Played"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[90 Minutes Played]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[90 Minutes Played]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals]"
+                          name="Goals"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Assists]"
+                          name="Assists"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Assists]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Assists]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Non-Penalty Goals]"
+                          name="Non-Penalty Goals"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Non-Penalty Goals]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Non-Penalty Goals]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Penalties Converted]"
+                          name="Penalties Converted"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Penalties Converted]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Penalties Converted]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Penalties Taken]"
+                          name="Penalties Taken"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Penalties Taken]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Penalties Taken]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Yellow Cards]"
+                          name="Yellow Cards"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Yellow Cards]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Yellow Cards]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Red Cards]"
+                          name="Red Cards"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Red Cards]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Red Cards]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals per 90 Minutes]"
+                          name="Goals per 90 Minutes"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals per 90 Minutes]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals per 90 Minutes]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Assists per 90 Minutes]"
+                          name="Assists per 90 Minutes"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Assists per 90 Minutes]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Assists per 90 Minutes]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals and Assists per 90 Minutes]"
+                          name="Goals and Assists per 90 Minutes"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals and Assists per 90 Minutes]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals and Assists per 90 Minutes]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals excluding Penalties per 90 Minutes]"
+                          name="Goals excluding Penalties per 90 Minutes"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals excluding Penalties per 90 Minutes]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals excluding Penalties per 90 Minutes]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals and Assists excluding Penalties per 90 Minutes]"
+                          name="Goals and Assists excluding Penalties per 90 Minutes"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals and Assists excluding Penalties per 90 Minutes]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals and Assists excluding Penalties per 90 Minutes]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected xG]"
+                          name="Expected xG"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected xG]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Expected xG]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected Non-Penalty xG]"
+                          name="Expected Non-Penalty xG"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected Non-Penalty xG]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Expected Non-Penalty xG]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected xAG]"
+                          name="Expected xAG"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected xAG]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Expected xAG]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected Non-Penalty xG and xAG]"
+                          name="Expected Non-Penalty xG and xAG"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected Non-Penalty xG and xAG]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Expected Non-Penalty xG and xAG]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[xG]"
+                          name="xG"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[xG]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xG]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[xAG]"
+                          name="xAG"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[xAG]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xAG]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[xG and xAG]"
+                          name="xG and xAG"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[xG and xAG]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xG and xAG]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Non-Penalty xG]"
+                          name="Non-Penalty xG"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Non-Penalty xG]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Non-Penalty xG]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Non-Penalty xG and xAG]"
+                          name="Non-Penalty xG and xAG"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Non-Penalty xG and xAG]"
+                          length="50"
+                          dataType="str"
+                          codePage="1252"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          truncationRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Non-Penalty xG and xAG]">
+                          <properties>
+                            <property
+                              name="FastParse"
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines.">false</property>
+                            <property
+                              name="UseBinaryFormat"
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format.">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Player]"
+                          name="Player"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Position]"
+                          name="Position"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Team]"
+                          name="Team"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Age]"
+                          name="Age"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Year of Birth]"
+                          name="Year of Birth"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Matches Played]"
+                          name="Matches Played"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Starts]"
+                          name="Starts"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Minutes Played]"
+                          name="Minutes Played"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[90 Minutes Played]"
+                          name="90 Minutes Played"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals]"
+                          name="Goals"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Assists]"
+                          name="Assists"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Non-Penalty Goals]"
+                          name="Non-Penalty Goals"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Penalties Converted]"
+                          name="Penalties Converted"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Penalties Taken]"
+                          name="Penalties Taken"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Yellow Cards]"
+                          name="Yellow Cards"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Red Cards]"
+                          name="Red Cards"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals per 90 Minutes]"
+                          name="Goals per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Assists per 90 Minutes]"
+                          name="Assists per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals and Assists per 90 Minutes]"
+                          name="Goals and Assists per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals excluding Penalties per 90 Minutes]"
+                          name="Goals excluding Penalties per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Goals and Assists excluding Penalties per 90 Minutes]"
+                          name="Goals and Assists excluding Penalties per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Expected xG]"
+                          name="Expected xG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Expected Non-Penalty xG]"
+                          name="Expected Non-Penalty xG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Expected xAG]"
+                          name="Expected xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Expected Non-Penalty xG and xAG]"
+                          name="Expected Non-Penalty xG and xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xG]"
+                          name="xG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xAG]"
+                          name="xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[xG and xAG]"
+                          name="xG and xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Non-Penalty xG]"
+                          name="Non-Penalty xG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Non-Penalty xG and xAG]"
+                          name="Non-Penalty xG and xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Error Output]"
+                      name="Flat File Source Error Output"
+                      isErrorOut="true">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          dataType="text"
+                          codePage="1252" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Insert data\OLE DB Destination"
+                  name="OLE DB Destination"
+                  componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+                  description="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+                  <properties>
+                    <property
+                      name="CommandTimeout"
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                    <property
+                      name="OpenRowset"
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset.">[STG_Players]</property>
+                    <property
+                      name="OpenRowsetVariable"
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                    <property
+                      name="SqlCommand"
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      name="DefaultCodePage"
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                    <property
+                      name="AlwaysUseDefaultCodePage"
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                    <property
+                      name="AccessMode"
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      name="FastLoadKeepIdentity"
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                    <property
+                      name="FastLoadKeepNulls"
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                    <property
+                      name="FastLoadOptions"
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."></property>
+                    <property
+                      name="FastLoadMaxInsertCommitSize"
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Connections[OleDbConnection]"
+                      name="OleDbConnection"
+                      description="The OLE DB runtime connection used to access the database."
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-VQPC36Q.STG_WordCup]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-VQPC36Q.STG_WordCup]" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      name="OLE DB Destination Input"
+                      hasSideEffects="true"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Player]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Player]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Player]"
+                          cachedName="Player"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Position]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Position]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Position]"
+                          cachedName="Position"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Team]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Team]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Team]"
+                          cachedName="Team"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Age]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                          cachedName="Age"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Year of Birth]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Year of Birth]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year of Birth]"
+                          cachedName="Year of Birth"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Matches Played]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Matches Played]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Matches Played]"
+                          cachedName="Matches Played"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Starts]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Starts]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Starts]"
+                          cachedName="Starts"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Minutes Played]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Minutes Played]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minutes Played]"
+                          cachedName="Minutes Played"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[90 Minutes Played]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[90 Minutes Played]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[90 Minutes Played]"
+                          cachedName="90 Minutes Played"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Goals]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals]"
+                          cachedName="Goals"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Assists]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Assists]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Assists]"
+                          cachedName="Assists"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Non-Penalty Goals]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Non-Penalty Goals]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Non-Penalty Goals]"
+                          cachedName="Non-Penalty Goals"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Penalties Converted]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Penalties Converted]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Penalties Converted]"
+                          cachedName="Penalties Converted"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Penalties Taken]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Penalties Taken]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Penalties Taken]"
+                          cachedName="Penalties Taken"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Yellow Cards]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Yellow Cards]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Yellow Cards]"
+                          cachedName="Yellow Cards"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Red Cards]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Red Cards]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Red Cards]"
+                          cachedName="Red Cards"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Goals per 90 Minutes]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals per 90 Minutes]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals per 90 Minutes]"
+                          cachedName="Goals per 90 Minutes"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Assists per 90 Minutes]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Assists per 90 Minutes]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Assists per 90 Minutes]"
+                          cachedName="Assists per 90 Minutes"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Goals and Assists per 90 Minutes]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals and Assists per 90 Minutes]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals and Assists per 90 Minutes]"
+                          cachedName="Goals and Assists per 90 Minutes"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Goals excluding Penalties per 90 Minutes]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals excluding Penalties per 90 Minutes]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals excluding Penalties per 90 Minutes]"
+                          cachedName="Goals excluding Penalties per 90 Minutes"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Goals and Assists excluding Penalties per 90 Minutes]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Goals and Assists excluding Penalties per 90 Minutes]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals and Assists excluding Penalties per 90 Minutes]"
+                          cachedName="Goals and Assists excluding Penalties per 90 Minutes"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Expected xG]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected xG]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Expected xG]"
+                          cachedName="Expected xG"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Expected Non-Penalty xG]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected Non-Penalty xG]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Expected Non-Penalty xG]"
+                          cachedName="Expected Non-Penalty xG"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Expected xAG]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected xAG]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Expected xAG]"
+                          cachedName="Expected xAG"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Expected Non-Penalty xG and xAG]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Expected Non-Penalty xG and xAG]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Expected Non-Penalty xG and xAG]"
+                          cachedName="Expected Non-Penalty xG and xAG"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[xG]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[xG]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xG]"
+                          cachedName="xG"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[xAG]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[xAG]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xAG]"
+                          cachedName="xAG"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[xG and xAG]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[xG and xAG]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xG and xAG]"
+                          cachedName="xG and xAG"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Non-Penalty xG]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Non-Penalty xG]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Non-Penalty xG]"
+                          cachedName="Non-Penalty xG"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Non-Penalty xG and xAG]"
+                          lineageId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output].Columns[Non-Penalty xG and xAG]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Non-Penalty xG and xAG]"
+                          cachedName="Non-Penalty xG and xAG"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedCodepage="1252" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Player]"
+                          name="Player"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Position]"
+                          name="Position"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Team]"
+                          name="Team"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                          name="Age"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year of Birth]"
+                          name="Year of Birth"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Matches Played]"
+                          name="Matches Played"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Starts]"
+                          name="Starts"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minutes Played]"
+                          name="Minutes Played"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[90 Minutes Played]"
+                          name="90 Minutes Played"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals]"
+                          name="Goals"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Assists]"
+                          name="Assists"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Non-Penalty Goals]"
+                          name="Non-Penalty Goals"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Penalties Converted]"
+                          name="Penalties Converted"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Penalties Taken]"
+                          name="Penalties Taken"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Yellow Cards]"
+                          name="Yellow Cards"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Red Cards]"
+                          name="Red Cards"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals per 90 Minutes]"
+                          name="Goals per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Assists per 90 Minutes]"
+                          name="Assists per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals and Assists per 90 Minutes]"
+                          name="Goals and Assists per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals excluding Penalties per 90 Minutes]"
+                          name="Goals excluding Penalties per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Goals and Assists excluding Penalties per 90 Minutes]"
+                          name="Goals and Assists excluding Penalties per 90 Minutes"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Expected xG]"
+                          name="Expected xG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Expected Non-Penalty xG]"
+                          name="Expected Non-Penalty xG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Expected xAG]"
+                          name="Expected xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Expected Non-Penalty xG and xAG]"
+                          name="Expected Non-Penalty xG and xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xG]"
+                          name="xG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xAG]"
+                          name="xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xG and xAG]"
+                          name="xG and xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Non-Penalty xG]"
+                          name="Non-Penalty xG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Non-Penalty xG and xAG]"
+                          name="Non-Penalty xG and xAG"
+                          dataType="str"
+                          length="50"
+                          codePage="1252" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      name="OLE DB Destination Error Output"
+                      exclusionGroup="1"
+                      synchronousInputId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      isErrorOut="true">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          lineageId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          lineageId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Insert data\Row Count"
+                  name="Row Count"
+                  componentClassID="{E2697D8C-70DA-42B2-8208-A19CE3A9FE41}"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+                  <properties>
+                    <property
+                      name="VariableName"
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count.">User::NbrLines</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Insert data\Row Count.Inputs[Row Count Input 1]"
+                      name="Row Count Input 1"
+                      hasSideEffects="true">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Insert data\Row Count.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Foreach Loop Container\Insert data\Row Count.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Insert data.Paths[Flat File Source Output]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Insert data\Flat File Source.Outputs[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Insert data\Row Count.Inputs[Row Count Input 1]" />
+                <path
+                  refId="Package\Foreach Loop Container\Insert data.Paths[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  startId="Package\Foreach Loop Container\Insert data\Row Count.Outputs[Row Count Output 1]"
+                  endId="Package\Foreach Loop Container\Insert data\OLE DB Destination.Inputs[OLE DB Destination Input]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Insert data file in history"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:ThreadHint="0"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Insert data file in history"
+          DTS:DTSID="{E1E376E4-D612-4724-8A5E-56DFB874E88F}"
+          DTS:Description="Execute SQL Task"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{C3F4C295-24FB-42F7-811D-C77106C094DC}"
+              SQLTask:SqlStatementSource="insert into [STG_WordCup].[dbo].[history]&#xA;values (?,?,(select getdate()))" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::Path"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="100" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::NbrLines"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="10" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Move File"
+          DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+          DTS:ThreadHint="0"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Move File"
+          DTS:DTSID="{A9F1E34B-A25C-46BF-A820-96D45323A87A}"
+          DTS:Description="File System Task"
+          DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask, Microsoft.SqlServer.FileSystemTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="{5292FC93-F02B-4094-9743-632777B144BB}"
+              TaskDestinationPath="{5B1ED18B-69C0-4F7B-83C6-A972DB6C2FFE}" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          DTS:From="Package\Foreach Loop Container\Check Exist File"
+          DTS:To="Package\Foreach Loop Container\Insert data"
+          DTS:EvalOp="1"
+          DTS:LogicalAnd="True"
+          DTS:Expression="@[User::ResultSet]==0"
+          DTS:ObjectName="Constraint"
+          DTS:DTSID="{625E330E-7E59-454D-B22A-371CB488343B}"
+          DTS:CreationName="" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
+          DTS:From="Package\Foreach Loop Container\Insert data"
+          DTS:To="Package\Foreach Loop Container\Move File"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:DTSID="{E35B9E77-D802-4E44-BB24-EB5617CE3C3C}"
+          DTS:CreationName="" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 2]"
+          DTS:From="Package\Foreach Loop Container\Move File"
+          DTS:To="Package\Foreach Loop Container\Insert data file in history"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:DTSID="{52132E80-4A06-4E8E-B23B-D3043C5D00CF}"
+          DTS:CreationName="" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:VariableName="User::Path"
+          DTS:ValueIndex="0"
+          DTS:ObjectName="{87694DC9-708B-43CF-87DD-D47A6A8A4B02}"
+          DTS:DTSID="{87694DC9-708B-43CF-87DD-D47A6A8A4B02}"
+          DTS:CreationName="" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate STG Players"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate STG Players"
+      DTS:DTSID="{947A4618-E8B2-4027-A500-F5809ADE9C0E}"
+      DTS:Description="Execute SQL Task"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C3F4C295-24FB-42F7-811D-C77106C094DC}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [STG_WordCup].[dbo].[STG_Players]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:From="Package\Truncate STG Players"
+      DTS:To="Package\Foreach Loop Container"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:DTSID="{BDD77576-2D4B-4EF4-A037-943F19B0F7EB}"
+      DTS:CreationName="" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Foreach Loop Container\Check Exist File"
+          TopLeft="27.1,5.49999999999995" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Foreach Loop Container\Insert data"
+          TopLeft="37.5,107.1" />
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\Foreach Loop Container\Insert data file in history"
+          TopLeft="5.50000000000003,310.3" />
+        <NodeLayout
+          Size="121.6,41.6"
+          Id="Package\Foreach Loop Container\Move File"
+          TopLeft="41.5,208.7" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          TopLeft="102.3,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,18.25,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="102.3,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 2]"
+          TopLeft="102.3,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="204.8,407.2"
+          Size="204.8,450.4"
+          Id="Package\Foreach Loop Container"
+          TopLeft="25.500000340598,87.5235291372121" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Truncate STG Players"
+          TopLeft="18.3,5.49999999999995" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="107.9,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.000000340598,40.4235291372122"
+              Start="0,0"
+              End="20.000000340598,32.9235291372122">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.2117645686061" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.2117645686061"
+                    Point2="0,20.2117645686061"
+                    Point3="4,20.2117645686061" />
+                  <mssgle:LineSegment
+                    End="16.000000340598,20.2117645686061" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.000000340598,20.2117645686061"
+                    Point2="20.000000340598,20.2117645686061"
+                    Point3="20.000000340598,24.2117645686061" />
+                  <mssgle:LineSegment
+                    End="20.000000340598,32.9235291372122" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Insert data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Foreach Loop Container\Insert data\OLE DB Destination"
+          TopLeft="5.50000000000003,208.7" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Foreach Loop Container\Insert data\Flat File Source"
+          TopLeft="15.1,5.49999999999995" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Foreach Loop Container\Insert data\Row Count"
+          TopLeft="25.5,108.323529428924" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Insert data.Paths[Row Count Output 1]"
+          TopLeft="90.3,149.923529428924">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.7764705710757"
+              Start="0,0"
+              End="0,51.2764705710757">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.2764705710757" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Insert data.Paths[Flat File Source Output]"
+          TopLeft="90.3,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.2235294289243"
+              Start="0,0"
+              End="0,53.7235294289243">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.7235294289243" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Insert data\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
