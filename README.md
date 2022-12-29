@@ -1,5 +1,5 @@
 # ETL-for-data-analytics-for-the-world-cup-Qatar-2022
-![Anime insights](https://user-images.githubusercontent.com/107370774/180188529-c631f82a-e272-4aeb-9916-25fe4c3bef23.jpg)
+![ETL Qatar world cup 2022](https://user-images.githubusercontent.com/107370774/209961249-192d1ac6-2438-45ec-86f9-0837673c2b72.jpg)
 
 by [@yaichmelek](https://linkedin.com/in/yaich-melek)
 
